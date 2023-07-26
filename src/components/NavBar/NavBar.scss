@@ -1,0 +1,39 @@
+.navbar{
+
+    margin-top: 40px;
+
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &-action{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.nav{
+
+    &-list{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &-item{
+        font-size: 1.1rem;
+        cursor: pointer;
+
+        @media (min-width: 768px){
+            &:hover{
+                color: purple;
+            }
+        }
+    }
+}

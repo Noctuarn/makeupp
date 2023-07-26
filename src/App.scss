@@ -1,0 +1,25 @@
+.app{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    &-container{
+        max-width: 1560px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+}
+
+.btn{
+
+    cursor: pointer;
+
+    &-icon{
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+    }
+}
