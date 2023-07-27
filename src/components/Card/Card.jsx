@@ -15,17 +15,16 @@ const Card = ({
   const getStars = (starsCount) => {
     const stars = [];
     let blackStarKey = 0;
-    let redStarKey = 5 - starsCount;
-
+    
     for (let index = 0; index < starsCount; index++) {
       stars.push(
-        <BsStarFill color="#fff" className="star" key={blackStarKey++} />
+        <BsStarFill color="#fff" className="star" key = {"star" + index} />
       );
     }
 
     for (let index = 0; index < 5 - starsCount; index++) {
       stars.push(
-        <BsStarFill className="star star-opacity" key={redStarKey++} />
+        <BsStarFill className="star star-opacity" key={"op-star" + index}  />
       );
     }
 

@@ -1,0 +1,26 @@
+.catalog{
+
+    &-row{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    &-title{
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    &-arrow{
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+
+.catalog-srollbar {
+    display: flex;
+    width: 100%;
+  }
+

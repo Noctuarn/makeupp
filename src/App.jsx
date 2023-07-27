@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+
+import {AiOutlineArrowUp} from "react-icons/ai"
+
 import "./App.scss";
 
 import Home from "./pages/Home/Home";
@@ -18,6 +21,7 @@ function App() {
           <Route path="/basket" element={<Basket />} />
           <Route path="/detail/:id" element={<Detail />} />
         </Routes>
+        <a href="#navbar" className="btn btn-anchor"><AiOutlineArrowUp/></a>
       </div>
     </div>
   );

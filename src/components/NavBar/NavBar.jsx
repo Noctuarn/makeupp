@@ -13,7 +13,7 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar" id="navbar">
       <div className="navbar-header">
         <Button className="btn btn-search btn-icon">
           <BsSearch />

@@ -1,27 +1,31 @@
 import React from "react";
 
 import Slider from "../../components/Slider/Slider";
-import Card from "../../components/Card/Card";
+import HorizontalRow from "../../components/HorizontalRow/HorizontalRow";
 
 import "./Home.scss";
-import { GOODS } from "../../DATA";
+
+const catalogList = [
+  {title: "Пропозиція брендів", type: "brand"},
+  {title: "Новинки", type: "new"},
+  {title: "Парфумерія", type: "perfume"},
+  {title: "Макіяж", type: "makeup"},
+  {title: "Чоловічі", type: "men"},
+  {title: "Волося", type: "hair"},
+  {title: "Обличчя", type: "face"},
+  {title: "Тіло та ванна", type: "bath and body"},
+  {title: "Здоров'я та догляд", type: "health and care"},
+] 
+
 
 const Home = () => {
   return (
     <main className="home">
       <Slider />
-      <div className="catalog">
-        {GOODS.map((item) => (
-          <Card key={item.id}
-            imgSrc={item.imgSrc}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            type={item.type}
-            rating={item.rating}
-            responces={item.responces}
-          />
-        ))}
+      <div className="home-catalog">
+        {catalogList.map((catalog, index) => {
+          return <HorizontalRow key={index + "" + catalog.title} title={catalog.title} catalogType={catalog.type}/>
+        })}
       </div>
     </main>
   );
