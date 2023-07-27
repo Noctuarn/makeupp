@@ -34,8 +34,12 @@ const NavBar = () => {
           <li className="nav-item">Парфумерія</li>
           <li className="nav-item">Макіяж</li>
           <li className="nav-item">Чоловічі</li>
-          <li className="nav-item">Косметика</li>
-          <li className="nav-item">Аксесуари</li>
+          <li className="nav-item">Волося</li>
+          <li className="nav-item">Обличчя</li>
+          <li className="nav-item">Тіло та ванна</li>
+          <li className="nav-item">Здоров'я та догляд</li>
+          <li className="nav-item">Новинки</li>
+          <li className="nav-item">Бренди</li>
         </ul>
       </nav>
     </div>
