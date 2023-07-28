@@ -150,7 +150,7 @@ export const GOODS = [
     rating: 0,
     responces: 0,
     price: 2039,
-    type: ["bath and body", "new"]
+    type: ["bath_and_body", "new"]
   },
 
   {
@@ -172,7 +172,7 @@ export const GOODS = [
     rating: 5,
     responces: 1,
     price: 300,
-    type: ["men", "bath and body"]
+    type: ["men", "bath_and_body"]
   },
 
   {
@@ -183,7 +183,7 @@ export const GOODS = [
     rating: 5,  
     responces: 519,
     price: 351,
-    type: ["health and care", "bath and body", "brand"]
+    type: ["health_and_care", "bath_and_body", "brand"]
   },
 
   {
@@ -194,7 +194,7 @@ export const GOODS = [
     rating: 5,  
     responces: 839,
     price: 205,
-    type: ["health and care", "face"]
+    type: ["health_and_care", "face"]
   },
 
   {
@@ -227,7 +227,7 @@ export const GOODS = [
     rating: 3,  
     responces: 20,
     price: 1322,
-    type: ["bath and body", "men", "health and care"]
+    type: ["bath_and_body", "men", "health_and_care"]
   },
 
   {
@@ -238,7 +238,7 @@ export const GOODS = [
     rating: 4,  
     responces: 1430,
     price: 27,
-    type: ["health and care", "hair"]
+    type: ["health_and_care", "hair"]
   },
 
   {
@@ -249,7 +249,7 @@ export const GOODS = [
     rating: 5,  
     responces: 1010,
     price: 304,
-    type: ["health and care", "face", "bath and body"]
+    type: ["health_and_care", "face", "bath_and_body"]
   },
 
   {
@@ -260,7 +260,7 @@ export const GOODS = [
     rating: 5,  
     responces: 457,
     price: 282,
-    type: ["health and care", "face", "bath and body"]
+    type: ["health_and_care", "face", "bath_and_body"]
   },
 
   {
@@ -315,7 +315,7 @@ export const GOODS = [
     rating: 4,  
     responces: 71,
     price: 458,
-    type: ["bath and body", "face", "health and care"]
+    type: ["bath_and_body", "face", "health_and_care"]
   },
 
   {

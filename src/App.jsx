@@ -10,6 +10,8 @@ import Basket from "./pages/Basket/Basket";
 import Detail from "./pages/Detail/Detail";
 
 import NavBar from "./components/NavBar/NavBar";
+import Form from "./components/Form/Form";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
           <Route path="/basket" element={<Basket />} />
           <Route path="/detail/:id" element={<Detail />} />
         </Routes>
+
+        <Form/>
+        <Footer/>
+
         <a href="#navbar" className="btn btn-anchor"><AiOutlineArrowUp/></a>
       </div>
     </div>
