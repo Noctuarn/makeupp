@@ -1,9 +1,12 @@
 import React from "react";
-import { BsStarFill } from "react-icons/bs";
+import { getStars } from "../../utils/getStars";
+
+import { Link } from "react-router-dom";
 
 import "./Card.scss";
 
 const Card = ({
+  id,
   imgSrc,
   name,
   description,
@@ -12,30 +15,13 @@ const Card = ({
   price,
   type,
 }) => {
-  const getStars = (starsCount) => {
-    const stars = [];
-    let blackStarKey = 0;
-    
-    for (let index = 0; index < starsCount; index++) {
-      stars.push(
-        <BsStarFill color="#fff" className="star" key = {"star" + index} />
-      );
-    }
-
-    for (let index = 0; index < 5 - starsCount; index++) {
-      stars.push(
-        <BsStarFill className="star star-opacity" key={"op-star" + index}  />
-      );
-    }
-
-    return stars;
-  };
+  
 
   return (
     <div className="card">
-      <div className="card-image">
+      <Link to={`/detail/${id}`} className="card-image">
         <img src={imgSrc} alt="" />
-      </div>
+      </Link>
       <div className="card-content">
         <h4 className="card-name">{name}</h4>
         <h5 className="card-description">{description}</h5>

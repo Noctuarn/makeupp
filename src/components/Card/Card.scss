@@ -59,21 +59,6 @@
     color: #a6a2a2;
   }
 
-  .star{
-    cursor: pointer;
-    transition: transform 0.2s ease;
-
-    @media (min-width: 768px) {
-      &:hover {
-        transform: scale(1.4);
-      }
-    }
-  }
-
-  .star-opacity {
-    opacity: 0.3;
-  }
-
   .card-price{
     color: red;
     font-size: 1.2rem;

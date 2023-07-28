@@ -63,7 +63,8 @@ const HorizontalRow = ({ title, catalogType }) => {
       >
         {correctTypesData.map((item) => (
           <Card
-            key={item.id}
+            key={item.name + " " + item.id}
+            id={item.id}
             imgSrc={item.imgSrc}
             name={item.name}
             description={item.description}
