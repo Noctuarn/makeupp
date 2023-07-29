@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import {AiOutlineArrowUp} from "react-icons/ai"
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 import "./App.scss";
 
@@ -14,6 +14,25 @@ import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if(window.scrollY > 500){
+          setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll)
+  }, []);
+
+  const scroolToTope = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="app">
       <div className="app-container">
@@ -24,10 +43,15 @@ function App() {
           <Route path="/detail/:id" element={<Detail />} />
         </Routes>
 
-        <Form/>
-        <Footer/>
+        <Form />
+        <Footer />
 
-        <a href="#navbar" className="btn btn-anchor"><AiOutlineArrowUp/></a>
+        <button
+          onClick={scroolToTope}
+          className={`btn btn-anchor ${isVisible ? "btn-anchor-visible" : ""}`}
+        >
+          <AiOutlineArrowUp />
+        </button>
       </div>
     </div>
   );

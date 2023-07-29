@@ -27,7 +27,7 @@
         border-radius: 50%;
         width: 50px;
         height: 50px;
-        box-shadow: 0px 0px 3px 1px #000000b0;
+        box-shadow: 0px 0px 5px 1px #00000049;
         display: grid;
         place-items: center;
         font-size: 2rem;
@@ -35,6 +35,8 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
+        opacity: 0;
+        transition: opacity .4s ease;
 
         svg{
             fill: black;
@@ -50,8 +52,12 @@
             }
         }
 
-
     }
+
+    &-anchor-visible{
+        opacity: 1;
+    }
+
 }
 
 .star{

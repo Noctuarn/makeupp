@@ -11,6 +11,10 @@ const Detail = () => {
   const [choosenElement, setChoosenElement] = useState(null);
 
   useEffect(() => {
+    window.scrollTo({top: 120})
+  }, [])
+
+  useEffect(() => {
     const element = GOODS.find((item) => item.id === parseInt(id));
     setChoosenElement(element);
   }, [id]);
