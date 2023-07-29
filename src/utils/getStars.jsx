@@ -15,5 +15,7 @@ export const getStars = (starsCount) => {
     );
   }
 
-  return stars;
+  return (
+    <div className="rating-stars">{stars}</div>
+  );
 };

@@ -20,6 +20,7 @@
         background-color: transparent;
         border: none;
         font-size: 2rem;
+        position: relative;
     }
 
     &-anchor{
@@ -66,4 +67,9 @@
 
   .star-opacity {
     opacity: 0.3;
+  }
+
+  .rating-stars {
+    display: flex;
+    gap: 5px;
   }

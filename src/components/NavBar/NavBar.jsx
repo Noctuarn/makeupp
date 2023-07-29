@@ -25,7 +25,7 @@ const NavBar = () => {
         <div className="navbar-action">
           <Button className="btn btn-like btn-icon"><BsBagHeart/></Button>
           <Button className="btn btn-basket btn-icon">
-            <SlBasket />
+            <SlBasket /> <div className="count">0</div>
           </Button>
         </div>
       </div>

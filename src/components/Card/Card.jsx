@@ -26,10 +26,10 @@ const Card = ({
         <h4 className="card-name">{name}</h4>
         <h5 className="card-description">{description}</h5>
         <div className="card-ratings-wrapper">
-          <div className="card-ratings-stars">{getStars(rating)}</div>
+          {getStars(rating)}
           <h5 className="card-rating-responce">{responces}</h5>
         </div>
-        <h4 className="card-price">{price}₴</h4>
+        <h4 className="card-price">{price} ₴</h4>
         <button className="btn card-button">Купити</button>
       </div>
     </div>

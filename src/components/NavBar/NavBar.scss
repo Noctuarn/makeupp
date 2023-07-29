@@ -37,3 +37,18 @@
         }
     }
 }
+
+.count{
+    font-size: 0.7rem;
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+    top: -7px;
+    right: -10px;
+}

@@ -1,0 +1,94 @@
+.detail {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+    padding: 100px 0px;
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    &-info{
+        width: 30%;
+    }
+
+    &-image{
+        width: 35%;
+        height: 100%;
+        overflow: hidden;
+        max-height: 800px;
+        img{
+            width: 80%;
+            height: 80%;
+        }
+      }
+
+    &-action {
+      width: 25%;
+    }
+  }
+
+  
+
+  &-name {
+    font-size: 1.8rem;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &-description {
+    font-size: 1rem;
+    color: #a6a2a2;
+    margin-bottom: 20px;
+  }
+
+  &-responce {
+    color: #a6a2a2;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  &-price {
+    color: red;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &-select {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+
+  &-btn{
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    transition: opacity .3s;
+
+    @media (min-width: 768px){
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+  }
+
+  &-availability{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+    
+    > h6{
+        font-size: 1rem;
+    }
+  }
+}
