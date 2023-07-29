@@ -6,12 +6,17 @@ import { BsSearch } from "react-icons/bs";
 import { SlBasket } from "react-icons/sl";
 import { BsBagHeart } from "react-icons/bs";
 
+import useAppContext from "../../hooks/useAppContext";
 
 import logo from "../../assets/image/logo.png";
 
 import "./NavBar.scss";
 
 const NavBar = () => {
+
+
+  const {basketState} = useAppContext(); 
+
   return (
     <div className="navbar" id="navbar">
       <div className="navbar-header">
@@ -25,7 +30,7 @@ const NavBar = () => {
         <div className="navbar-action">
           <Button className="btn btn-like btn-icon"><BsBagHeart/></Button>
           <Link to={"/basket"} className="btn btn-basket btn-icon">
-            <SlBasket /> <div className="count">0</div>
+            <SlBasket /> <div className="count">{basketState.length}</div>
           </Link>
         </div>
       </div>

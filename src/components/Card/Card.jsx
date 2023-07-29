@@ -1,7 +1,8 @@
 import React from "react";
 import { getStars } from "../../utils/getStars";
-
 import { Link } from "react-router-dom";
+
+import useAppContext from "../../hooks/useAppContext.jsx"
 
 import "./Card.scss";
 
@@ -16,6 +17,7 @@ const Card = ({
   type,
 }) => {
   
+  const {addItemsToBasket} = useAppContext()
 
   return (
     <div className="card">
@@ -30,7 +32,7 @@ const Card = ({
           <h5 className="card-rating-responce">{responces}</h5>
         </div>
         <h4 className="card-price">{price} ₴</h4>
-        <button className="btn card-button">Купити</button>
+        <button onClick={() => addItemsToBasket(id)} className="btn card-button">Купити</button>
       </div>
     </div>
   );
