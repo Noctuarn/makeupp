@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GOODS } from "../../DATA";
+import useAppContext from "../../hooks/useAppContext";
 
 import { getStars } from "../../utils/getStars";
 
@@ -9,6 +10,8 @@ import "./Detail.scss";
 const Detail = () => {
   const { id } = useParams();
   const [choosenElement, setChoosenElement] = useState(null);
+
+  const {addItemsToBasket} = useAppContext();
 
   useEffect(() => {
     window.scrollTo({top: 120})
@@ -45,7 +48,7 @@ const Detail = () => {
               <option>300 ml</option>
               <option>500 ml</option>
             </select>
-            <button className="btn detail-btn">Купити</button>
+            <button onClick={() => addItemsToBasket(choosenElement.id)} className="btn detail-btn">Купити</button>
             <div className="detail-availability">
               <h6>Є в наявності!</h6>
               <h6>

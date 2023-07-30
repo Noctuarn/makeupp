@@ -28,13 +28,14 @@ const storiesData = [
 ];
 
 const Slider = () => {
+
   return (
     <div className="slider-wraper">
-      <AwesomeSlider animation="cubeAnimation" className="slider">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+      <AwesomeSlider  animation="cubeAnimation" className="slider">
+        <div data-src = {"https://hips.hearstapps.com/hmg-prod/images/pr-image-2-1655488803.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*"}></div>
+        <div data-src={"https://www.wikihow.com/images/thumb/e/ef/Apply-Eye-Makeup-Step-21.jpg/aid18705-v4-1200px-Apply-Eye-Makeup-Step-21.jpg"}></div>
+        <div data-src={"https://blogscdn.thehut.net/wp-content/uploads/sites/439/2018/04/09222025/LF-US-April-2018-Image-4-1200px-x-672px_1200x672_acf_cropped.jpg"}></div>
+        <div data-src={"https://as2.ftcdn.net/v2/jpg/01/04/90/11/1000_F_104901122_HltBK3WIGv11f1g7zXps0Q155YE7JaCR.jpg"}></div>  
       </AwesomeSlider>
 
       <div className="stories">

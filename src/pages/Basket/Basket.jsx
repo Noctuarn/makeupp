@@ -1,12 +1,14 @@
 import React from "react";
 import useAppContext from "../../hooks/useAppContext.jsx";
 
+import { Link } from "react-router-dom";
+
 import { getStars } from "../../utils/getStars.jsx";
 
 import "./Basket.scss";
 
 const Basket = () => {
-  const { basketState, removeFromBasket } = useAppContext();
+  const { basketState, removeFromBasket, confirmOrder } = useAppContext();
 
   return (
     <div className="basket">
@@ -17,7 +19,9 @@ const Basket = () => {
           {basketState.map((item) => {
             return (
               <div className="basket-item" key={"basket-item" + item.id}>
-                <img className="basket-item-img" src={item.imgSrc} alt="" />
+                <Link to={`/detail/${item.id}`}>
+                  <img className="basket-item-img" src={item.imgSrc} alt="" />
+                </Link>
 
                 <div className="basket-item-content">
                   <h4 className="basket-item-name">{item.name}</h4>
@@ -32,15 +36,29 @@ const Basket = () => {
                   </h5>
                   <h5 className="basket-item-price">{item.price} ₴</h5>
 
-                  <button onClick={() => removeFromBasket(item.id)} className="btn basket-item-btn">Вилучити</button>
+                  <button
+                    onClick={() => removeFromBasket(item.id)}
+                    className="btn"
+                  >
+                    Вилучити
+                  </button>
                 </div>
               </div>
             );
           })}
         </div>
       ) : (
-        <h1>У вашому кошику немає товарів...</h1>
+        <div className="empty-basket">
+          <img className="empty-basket-img" src="https://feeloxy.com/wp-content/themes/mrtailor/images/empty_cart_retina.png" alt="" />
+          <h1 className="empty-basket-title">У вашому кошику немає товарів...</h1>
+        </div>
       )}
+
+      {basketState.length > 0 ? (
+        <button onClick={confirmOrder} className="btn btn-confirm">
+          Оформити замовлення
+        </button>
+      ) : null}
     </div>
   );
 };

@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   const ACTIONS = {
     addItem: "ADD_TO_BASKET",
     removeItem: "REMOVE_FROM_BASKET",
+    removeAll: "REMOVE_ALL",
   };
 
   const [basketState, dispatch] = useReducer(reducer, []);
@@ -27,9 +28,22 @@ const AppProvider = ({ children }) => {
     });
   };
 
+  const confirmOrder = () => {
+    let result = window.confirm("Бажаєте оформити замовлення ?");
+
+    if (result) {
+      dispatch({
+        type: ACTIONS.removeAll,
+      });
+      alert("Дякуємо за підтвердження");
+    } else {
+      alert("Підтвердження скасовано");
+    }
+  };
+
   return (
     <AppContext.Provider
-      value={{ basketState, addItemsToBasket, removeFromBasket }}
+      value={{ basketState, addItemsToBasket, removeFromBasket, confirmOrder }}
     >
       {children}
     </AppContext.Provider>

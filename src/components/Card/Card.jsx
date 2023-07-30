@@ -13,11 +13,10 @@ const Card = ({
   description,
   rating,
   responces,
-  price,
-  type,
+  price
 }) => {
   
-  const {addItemsToBasket} = useAppContext()
+  const {basketState, addItemsToBasket} = useAppContext()
 
   return (
     <div className="card">
